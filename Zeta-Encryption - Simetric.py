@@ -5,6 +5,7 @@ from cryptography.fernet import Fernet
 
 
 # Generate a Key
+# Key Required to encrypt and decrypt the file
 #key = Fernet.generate_key()
 
 # Saveing the key in a file
