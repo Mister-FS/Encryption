@@ -15,7 +15,7 @@ from cryptography.fernet import Fernet
 #print("Key has been generated and saved in key.key file")
 #print("Please keep the key safe and secure")
 
-
+# Function to load the key. 
 def load_key():
     with open("Key.key", "rb") as key_file:
         return key_file.read()
@@ -24,7 +24,7 @@ def load_key():
 key = load_key()
 fernet = Fernet(key)
 
-
+# Function to encrypt the file. 
 def encrypting_file(file_name):
     # Encrypting and saving the file
     with open(file_name, "rb") as file:
@@ -42,7 +42,7 @@ def encrypting_file(file_name):
 #encrypting_file("image.jpg")
 
 
-
+# Function to decrypt the file. 
 def decrypting_file(file_name):
     key = load_key()
     fernet = Fernet(key)
